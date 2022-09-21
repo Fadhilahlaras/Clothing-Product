@@ -1,28 +1,28 @@
 import React, {Fragment, useEffect, useState} from "react";
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransition from 'react-transition-group';
 // import AppHeader from "../../../Layout/AppHeader"
 import {Row, CardBody} from "reactstrap";
 import Carousel from "../Carousel/index";
 import bg1 from "../../../assets/utils/images/originals/city.jpg";
-import axios from "axios";
-import Kartu from "../../Product/Kartu"
+// import axios from "axios";
+// import Kartu from "../../Product/Kartu"
 
 const Dashboard = () => {
     console.log("udah ada")
-    const [dataCard, setDataCard] = useState([])
+    // const [dataCard, setDataCard] = useState([])
     let imageArrayPath = [];
 
-    useEffect(() => {
-        axios.get("http://localhost:1717/api/product").then(res => {
-            setDataCard(res.data)
+    // useEffect(() => {
+    //     axios.get("http://localhost:1717/api/product").then(res => {
+    //         setDataCard(res.data)
 
-            console.log(res.data)
-        })
-    }, [])
+    //         console.log(res.data)
+    //     })
+    // }, [])
 
     return(
         <Fragment>
-            <CSSTransitionGroup
+            <CSSTransition
                 component="div"
                 transitionName="TabsAnimation"
                 transitionAppear={true}
@@ -64,7 +64,7 @@ const Dashboard = () => {
                         <Row>
                             <h3 style={{margin: "auto", marginBottom:"20px"}}> All Products </h3>
                         </Row>
-                        <Row>
+                        {/* <Row>
                             {dataCard.map((card, index) => (
                                 <Kartu key={index} id={card.id} title={card.productName}
                                        category={card.categoryName}
@@ -72,12 +72,12 @@ const Dashboard = () => {
                                        image={imageArrayPath[index]}/>
                             ))}
 
-                        </Row>
+                        </Row> */}
                         {/*</Card>*/}
                     </div>
 
                 </div>
-            </CSSTransitionGroup>
+            </CSSTransition>
         </Fragment>
     )
 }

@@ -1,13 +1,13 @@
-// import { Route, Redirect} from 'react-router-dom';
+import {Route, Redirect} from 'react-router-dom';
 import React, {Suspense, lazy, Fragment} from 'react';
-// import Loader from 'react-loaders'
+import Loader from 'react-loaders'
 
-// import {
-//     ToastContainer,
-// } from 'react-toastify';
+import {
+    ToastContainer,
+} from 'react-toastify';
 
 
-// const Homepage = lazy(()=> import('../../DemoPages/Homepage'));
+const Homepage = lazy(()=> import('../../Homepage'));
 
 // const HomepageAdm = lazy(()=> import('../../DemoPages/HomepageAdmin'));
 
@@ -58,7 +58,7 @@ const AppMain = () => {
                         </div>
                     </div>
                 }>
-                    {/* <Route path="/home" component={Homepage}/> */}
+                    <Route path="/home" component={Homepage}/>
                 </Suspense>
 
                 {/* Homepage Admin */}

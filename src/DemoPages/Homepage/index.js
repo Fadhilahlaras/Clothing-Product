@@ -3,7 +3,7 @@ import React, {Fragment} from "react";
 import {Route} from "react-router-dom";
 import Dashboard from "./Dashboard";
 
-import AppHeader from "../../Layout/AppHeader/index";
+import AppHeader from "../Layout/AppHeader/index.js";
 
 
 const Homepage = ({match}) => (

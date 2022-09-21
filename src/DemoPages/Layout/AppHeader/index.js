@@ -3,15 +3,15 @@ import cx from 'classnames';
 
 import {connect} from 'react-redux';
 
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransition from 'react-transition-group';
 
-import HeaderLogo from '../AppLogo';
+// import HeaderLogo from '../AppLogo';
 
-import SearchBox from './Components/SearchBox';
-import MegaMenu from './Components/MegaMenu';
-import UserBox from './Components/UserBox';
+// import SearchBox from './Components/SearchBox';
+// import MegaMenu from './Components/MegaMenu';
+// import UserBox from './Components/UserBox';
 
-import HeaderDots from "./Components/HeaderDots";
+// import HeaderDots from "./Components/HeaderDots";
 
 class Header extends React.Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class Header extends React.Component {
         } = this.props;
         return (
             <Fragment>
-                <CSSTransitionGroup
+                <CSSTransition
                     component="div"
                     className={cx("app-header", headerBackgroundColor, {'header-shadow': enableHeaderShadow})}
                     transitionName="HeaderAnimation"
@@ -41,7 +41,7 @@ class Header extends React.Component {
                     transitionEnter={false}
                     transitionLeave={false}>
 
-                    <HeaderLogo/>
+                    {/* <HeaderLogo/> */}
 
 
                     <div className={cx(
@@ -55,13 +55,13 @@ class Header extends React.Component {
                         {/*</div>*/}
 
                         <div className="app-header-right">
-                            <MegaMenu/>
+                            {/* <MegaMenu/> */}
 
-                            <HeaderDots/>
-                            <UserBox/>
+                            {/* <HeaderDots/> */}
+                            {/* <UserBox/> */}
                         </div>
                     </div>
-                </CSSTransitionGroup>
+                </CSSTransition>
             </Fragment>
         );
     }
